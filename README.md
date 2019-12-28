@@ -1,5 +1,23 @@
 # Setup Docker Nginx Reverse Proxy
 
+# Struktur Folder
+
+```
+.
+├── conf.d
+│   └── default.conf
+├── default-ssl.conf
+├── docker-compose.yml
+├── Dockerfile
+├── README.md
+└── ssl
+    ├── certs
+    │   └── dhparam.pem
+    └── private
+        ├── ams.spentera.internal.crt
+        └── ams.spentera.internal.key
+```
+
 1. git clone reporsitory ini
 2. create docker network sendiri
 ```
@@ -27,3 +45,4 @@
    sudo docker exec nginx_proxy nginx -t
    sudo docker exec nginx_proxy nginx -s reload
 ```
+
