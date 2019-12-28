@@ -1,0 +1,20 @@
+
+version: "3"
+
+services:
+  reverse_proxy:
+    build: .
+    container_name: 'nginx_proxy'
+    restart: 'always'
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./ssl/private:/etc/ssl/private
+      - ./ssl/certs:/etc/ssl/certs
+
+networks:
+  default:
+    external:
+      name: nginx_proxy_network
