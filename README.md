@@ -1,6 +1,6 @@
 # Setup Docker Nginx Reverse Proxy
 
-# Struktur Folder
+## Struktur Folder
 
 ```
 .
