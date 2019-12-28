@@ -8,9 +8,11 @@
 3. Pastikan isi Dockerfile sesuai setup yang diinginkan
 4. Pastikan docker-compose.yml sesuai setup yang diinginkan
 5. Perbarui atau buat sendiri ssl certificate
+```
    a. dhparam.pem -> /etc/ssl/certs
    b. domain.crt -> /etc/ssl/private
    c. domain.key -> /etc/ssl/private
+```
 6. Jalankan docker compose
 ```
    sudo docker docker-compose up -d
