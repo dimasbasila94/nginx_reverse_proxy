@@ -14,8 +14,8 @@
     ├── certs
     │   └── dhparam.pem
     └── private
-        ├── ams.spentera.internal.crt
-        └── ams.spentera.internal.key
+        ├── domain.crt
+        └── domain.key
 ```
 
 1. git clone reporsitory ini
