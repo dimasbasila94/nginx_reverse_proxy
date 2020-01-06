@@ -58,7 +58,7 @@ networks:
 ```
 #### command docker
 ```
-docker network connect nginx_proxy_networkk(nama network nginx reverse proxy) backend(nama container);
+docker network connect nginx_proxy_network(nama network nginx reverse proxy) backend(nama container);
 ```
 berikut contoh  file.conf
 
@@ -100,4 +100,17 @@ server {
    
 }
 ```
+###note
+```
+check ip docker
+docker inspect <container id> | grep "IPAddress"
 
+create ssl with openssl
+openssl req -x509 -nodes -days 365 -subj "/C=CA/ST=QC/O=Company, Inc./CN=mydomain.com" -addext "subjectAltName=DNS:mydomain.com" -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt;
+
+import mysql command
+mysql -u username -p new_database < data-dump.sql
+
+a2ensite di docker
+sudo docker exec nama_container a2ensite file.conf
+```
