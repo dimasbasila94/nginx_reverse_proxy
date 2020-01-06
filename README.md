@@ -100,7 +100,7 @@ server {
    
 }
 ```
-###note
+### note
 ```
 check ip docker
 docker inspect <container id> | grep "IPAddress"
